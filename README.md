@@ -3,7 +3,7 @@ Aure Core integration/staging tree
 
 [![Build Status](https://travis-ci.org/aure-project/aure.svg?branch=master)](https://travis-ci.org/aure-project/aure)
 
-https://aure.org
+https://auracoin.gt.tc
 
 What is Aure?
 ----------------
