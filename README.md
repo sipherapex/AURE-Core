@@ -15,7 +15,7 @@ out collectively by the network. Aure Core is the name of open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Aure Core software, see [https://aure.org](https://aure.org).
+the Aure Core software, see [https://auracoin.gt.tc](https://auracoin.gt.tc).
 
 License
 -------
