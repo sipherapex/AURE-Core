@@ -88,13 +88,13 @@ public:
 
         // Deployment of Taproot (BIPs 340-342)
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].bit = 2;
-        consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].nStartHeight = 0; // End November 2021
-        consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].nTimeoutHeight = 9999999; // 364 days later
+        consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].nStartHeight = 0;
+        consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].nTimeoutHeight = 9999999;
 
         // Deployment of MWEB (LIP-0002, LIP-0003, and LIP-0004)
         consensus.vDeployments[Consensus::DEPLOYMENT_MWEB].bit = 4;
-        consensus.vDeployments[Consensus::DEPLOYMENT_MWEB].nStartHeight = 0; // End Feb 2022
-        consensus.vDeployments[Consensus::DEPLOYMENT_MWEB].nTimeoutHeight = 9999999; // 364 days later
+        consensus.vDeployments[Consensus::DEPLOYMENT_MWEB].nStartHeight = 9999999;
+        consensus.vDeployments[Consensus::DEPLOYMENT_MWEB].nTimeoutHeight = 9999999;
 
         consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000001");
         consensus.defaultAssumeValid = uint256S("0x00"); // 2772730
@@ -151,15 +151,18 @@ public:
 
         checkpointData = {
             {
-                { 0, uint256S("0x") }
+                { 0, uint256S("0x") },
+                { 5000, uint256S("0x8f6facb48b8d1730a4fea018bad93784d988937a4a303f638e92d94b02e23c41") },
+                { 5714, uint256S("0xf60bf276eb014ea332a93909ee1cfddb045b37981aaa852195deae0e8bf6ac54") },
+                { 24191, uint256S("0x2fe835b5c7cb7e24c87bdca095e132e82afb004fc98d01c5633282b4ab0b4a4f") },
             }
         };
 
         chainTxData = ChainTxData{
             // Data from rpc: getchaintxstats 17280 fdb81fc2edae4e315716890bd343d814184ea50331cd47166e19120a5163a678
-            /* nTime    */ 1738137600,
-            /* nTxCount */ 0,
-            /* dTxRate  */ 0
+            /* nTime    */ 1769774497,
+            /* nTxCount */ 24192,
+            /* dTxRate  */ 0.01
         };
     }
 };
